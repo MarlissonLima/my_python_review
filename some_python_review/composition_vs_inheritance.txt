@@ -1,0 +1,39 @@
+Inheritance:
+
+class Parent:
+    #constructor
+    #variables of parent class
+    #methods
+    .
+    .
+    .
+
+class Child(Parent):
+    #constructor(child)
+    #variables(child)
+    #methods(child)
+    .
+    .
+    .
+
+
+
+Composition:
+
+class A:
+    #variables(class A)
+    #methods(class A)
+    .
+    .
+    .
+
+class B:
+    obj = A() # using obj we can acess member's of class A
+
+    #varibles(class B)
+    #methods(class B)
+
+    .
+    .
+    .
+    
