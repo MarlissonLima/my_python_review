@@ -29,6 +29,12 @@ class Car():
         else:
             print("The gas tank is not filled")
 
+class Battery():
+    def __init__(self,battery_size=70) -> None:
+        self.battery_size = battery_size
+    
+    def describe_battery(self):
+        print(f"This car has a {str(self.battery_size)}-kWh battery")
     
 
 class EletricCar(Car):
@@ -36,12 +42,13 @@ class EletricCar(Car):
         #intialize attributes of the base class(parent)
         #then initialize attributes specific to an eletric car(derivate class (child))
         super().__init__(make, model, year,gas_tank)
-        self.battery_size = 70
+        #self.battery_size = 70
+        self.battery = Battery()
         
+    
 
-
-    def describe_battery(self):
-        print(f"This car has a {str(self.battery_size)}-kWh battery")
+    #def describe_battery(self):
+    #   print(f"This car has a {str(self.battery_size)}-kWh battery")
 
     def fill_gas_tank(self): #overriding methods from parent class
        print("This car doesn't need a gas tank!!!")
@@ -73,7 +80,7 @@ if __name__=='__main__':
     #inheritance
     my_tesla = EletricCar('tesla','model s',2016,False)
     print(my_tesla.get_descriptive_name())
-    my_tesla.describe_battery()
+    my_tesla.battery.describe_battery()
     my_tesla.fill_gas_tank()
 
 
