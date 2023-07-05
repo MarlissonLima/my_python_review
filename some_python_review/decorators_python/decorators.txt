@@ -1,0 +1,6 @@
+->Decorators allows programmers to modify the behaviour of a function or class:
+wraps another function in order to extend the behaviour of the wrapped function,
+without permanently modifying it
+
+
+
